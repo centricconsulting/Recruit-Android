@@ -3,11 +3,14 @@
           package="com.centric.Recruit_Android">
     <uses-sdk android:minSdkVersion="16"/>
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".Search" android:label="Search">
+        <activity android:name="com.centric.Recruit_Android.search" android:label="Search">
+        </activity>
+        <activity android:name="com.centric.Recruit_Android.main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.centric.Recruit_Android.LoginWebView"/>
     </application>
 </manifest>

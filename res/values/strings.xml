@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Recruit-Android</string>
+    <string name="button_search">Search</string>
+    <string name="hint_search">Search by Name, Role, or Tech</string>
+    <string name="menuitem_exit">Exit</string>
+    <string name="menuitem_login">Login</string>
+    <string name="google_auth_url">http://thawing-ridge-1647.herokuapp.com/auth/google_apps</string>
 </resources>
