@@ -24,30 +24,23 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/centric/web/JSONParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/centric/Recruit_Android/LoginWebView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/main.xml" />
-      <change type="MOVED" beforePath="C:\Users\Mike Brooks\Documents\GitHub\Recruit-Android\res\layout\Search.xml" afterPath="$PROJECT_DIR$/res/layout/search.xml" />
-      <change type="MOVED" beforePath="C:\Users\Mike Brooks\Documents\GitHub\Recruit-Android\src\com\centric\Recruit_Android\Search.java" afterPath="$PROJECT_DIR$/src/com/centric/Recruit_Android/search.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" name="Default" comment="" />
     <ignored path="Recruit-Android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374208608683" ignored="false" />
+    <file path="/Dummy.txt" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1375239932837" ignored="false" />
     <file path="/search.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374203341633" ignored="false" />
     <file path="/JSONParser.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374117154076" ignored="false" />
-    <file path="/search.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374201927639" ignored="false" />
-    <file path="/strings.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374206839539" ignored="false" />
-    <file path="/fragment.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374120321118" ignored="false" />
-    <file path="/main.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374207211986" ignored="false" />
-    <file path="/main.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374204077006" ignored="false" />
-    <file path="/LoginWebView.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374205992861" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374207606205" ignored="false" />
+    <file path="/search.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374550926049" ignored="false" />
+    <file path="/strings.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1375155792246" ignored="false" />
+    <file path="/fragment.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1375155472143" ignored="false" />
+    <file path="/main.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1375243691255" ignored="false" />
+    <file path="/main.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1375159113045" ignored="false" />
+    <file path="/LoginWebView.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1375240657258" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374770559335" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374210951842" ignored="false" />
+    <file path="/Resource.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374640303689" ignored="false" />
+    <file path="/searchable.xml" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374643398991" ignored="false" />
+    <file path="/SearchableActivity.java" changelist="a8ddaa1e-9f54-4fe1-9272-d815df29cf87" time="1374726513850" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +91,83 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java" line="95" class="com.centric.Recruit_Android.main" package="com.centric.Recruit_Android">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java" line="32" class="com.centric.Recruit_Android.main" package="com.centric.Recruit_Android">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/LoginWebView.java" line="66" class="com.centric.Recruit_Android.LoginWebView.LoginWebViewClient" package="com.centric.Recruit_Android">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java" line="43" class="com.centric.Recruit_Android.main" package="com.centric.Recruit_Android">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java" line="55" class="com.centric.Recruit_Android.main" package="com.centric.Recruit_Android">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -108,43 +178,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="18" selection-start="788" selection-end="788" vertical-scroll-proportion="0.5964912">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/search.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="51" selection-start="322" selection-end="322" vertical-scroll-proportion="-1.02">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="43" selection-start="148" selection-end="156" vertical-scroll-proportion="-1.02">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/search.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="43" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
+            <state line="16" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,52 +190,28 @@
       <file leaf-file-name="main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="90" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
+            <state line="75" column="61" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginWebView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/LoginWebView.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="55" selection-start="2210" selection-end="2210" vertical-scroll-proportion="0.0">
+            <state line="9" column="47" selection-start="492" selection-end="492" vertical-scroll-proportion="0.35416666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="59" selection-start="165" selection-end="165" vertical-scroll-proportion="-2.04">
-              <folding />
-            </state>
+        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Handler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/os/Handler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="0" selection-start="4070" selection-end="4070" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Instrumentation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/app/Instrumentation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1078" column="0" selection-start="41343" selection-end="41343" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Activity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/app/Activity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5007" column="0" selection-start="211500" selection-end="211500" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="-2.04">
               <folding />
             </state>
           </provider>
@@ -224,14 +237,20 @@
       <list>
         <option value="$PROJECT_DIR$/res/layout/Search.xml" />
         <option value="$PROJECT_DIR$/src/com/centric/web/JSONParser.java" />
-        <option value="$PROJECT_DIR$/src/com/centric/Recruit_Android/search.java" />
         <option value="$PROJECT_DIR$/res/layout/search.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/centric/recruit_models/Resource.java" />
+        <option value="$PROJECT_DIR$/res/layout/resource.xml" />
+        <option value="$PROJECT_DIR$/res/xml/searchable.xml" />
+        <option value="$PROJECT_DIR$/src/com/centric/Recruit_Android/search.java" />
+        <option value="$PROJECT_DIR$/src/com/centric/Recruit_Android/find.java" />
         <option value="$PROJECT_DIR$/res/menu/main.xml" />
-        <option value="$PROJECT_DIR$/src/com/centric/Recruit_Android/LoginWebView.java" />
+        <option value="$PROJECT_DIR$/src/com/centric/Recruit_Android/SearchableActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/login.xml" />
+        <option value="$PROJECT_DIR$/src/com/centric/Recruit_Android/LoginWebView.java" />
+        <option value="$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java" />
       </list>
     </option>
   </component>
@@ -267,8 +286,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,6 +303,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Recruit-Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Recruit-Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Recruit-Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="centric" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -327,63 +368,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Recruit-Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Recruit-Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Recruit-Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Recruit-Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-async-http-1.4.3.jar!/" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="DEBUGGABLE_DEVICE" value="0149D1221100D019" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="DEBUGGABLE_PROCESS" value="com.centric.Recruit_Android" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.Recruit-Android">
     <configuration default="false" name="search" type="AndroidRunConfigurationType" factoryName="Android Application" temporary="true">
       <module name="Recruit-Android" />
-      <option name="ACTIVITY_CLASS" value="com.centric.Recruit_Android.search" />
+      <option name="ACTIVITY_CLASS" value="com.centric.Recruit_Android.find" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
@@ -431,19 +447,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -469,6 +472,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -526,8 +542,8 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="MyAvd0" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
@@ -577,6 +593,11 @@
       <created>1374034380296</created>
       <updated>1374034380296</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Search and Login activities/layouts.  Added JSONParser.">
+      <created>1374208716704</created>
+      <updated>1374208716704</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -600,29 +621,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925257" sideWeight="0.6703755" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32823366" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6008345" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3977747" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4812239" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32823366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32823366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32684284" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46453407" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4812239" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11840412" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15057915" sideWeight="0.67176634" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6703755" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.6703755" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6703755" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.6703755" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -695,122 +716,202 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/find.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="35" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Recruit-Android.iml">
+    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="6" column="15" selection-start="341" selection-end="341" vertical-scroll-proportion="0.26771653" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/centric/web/JSONParser.java">
+    <entry file="file://$PROJECT_DIR$/res/xml/searchable.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="52" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.33333334">
+        <state line="6" column="13" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/os/Looper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="0" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="510" column="0" selection-start="18362" selection-end="18362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="4070" selection-end="4070" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="138" column="0" selection-start="4785" selection-end="4785" vertical-scroll-proportion="0.33246753" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/app/Instrumentation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1078" column="0" selection-start="41343" selection-end="41343" vertical-scroll-proportion="0.0">
+        <state line="1080" column="0" selection-start="41392" selection-end="41392" vertical-scroll-proportion="0.041769043" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/webkit/WebViewClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="16" selection-start="2273" selection-end="2273" vertical-scroll-proportion="0.041769043" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/centric/web/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="46" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/SearchableActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="605" selection-end="818" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/app/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5007" column="0" selection-start="211500" selection-end="211500" vertical-scroll-proportion="0.0">
+        <state line="5104" column="0" selection-start="214965" selection-end="214965" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/os/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="43" selection-start="148" selection-end="156" vertical-scroll-proportion="-1.02">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="59" selection-start="165" selection-end="165" vertical-scroll-proportion="-2.04">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="337" selection-end="352" vertical-scroll-proportion="-4.76">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="43" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
+        <state line="98" column="0" selection-start="4070" selection-end="4070" vertical-scroll-proportion="0.33169532">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/LoginWebView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="55" selection-start="2210" selection-end="2210" vertical-scroll-proportion="0.0">
+        <state line="66" column="0" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.55263156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/login.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="14" selection-start="491" selection-end="491" vertical-scroll-proportion="0.4187192">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="-2.04">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/centric/Recruit_Android/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="90" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
+        <state line="75" column="61" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/search.xml">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="51" selection-start="322" selection-end="322" vertical-scroll-proportion="-1.02">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="788" selection-end="788" vertical-scroll-proportion="0.5964912">
+        <state line="9" column="47" selection-start="492" selection-end="492" vertical-scroll-proportion="0.35416666">
           <folding />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Recruit-Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>gson-2.2.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

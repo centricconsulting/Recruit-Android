@@ -19,8 +19,12 @@ public class LoginWebView extends Activity {
         super.onCreate(savedInstanceState);
         // Allow the title bar to show loading process
         requestWindowFeature(Window.FEATURE_PROGRESS);
+        setContentView(R.layout.login);
 
-        WebView webView = new WebView(this);
+        Intent intent = getIntent();
+        String url = intent.getStringExtra("google_auth_url");
+
+        WebView webView = (WebView) findViewById(R.id.loginWebView);
         // enable Javascript
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient() {
@@ -30,41 +34,40 @@ public class LoginWebView extends Activity {
                 setProgress(progress * 100);
             }
         });
-        webView.setWebViewClient(new WebViewClient() {
-            // When start to load page, show url in activity's title bar
-            @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                setTitle(url);
-            }
 
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                CookieSyncManager.getInstance().sync();
-                // get the cookie
-                String cookie = CookieManager.getInstance().getCookie(url);
-                if (cookie == null) {
-                    return;
-                }
+        webView.setWebViewClient(new LoginWebViewClient());
 
-                String[] pairs = cookie.split(";");
-                for (int i = 0; i < pairs.length; i++) {
-                    String[] parts = pairs[i].split("=", 2);
-                    // if token i found, return it to the calling activity
-                    if (parts.length == 2 && parts[0].equalsIgnoreCase("oauth_token")) {
-                        Intent result = new Intent();
-                        result.putExtra("token", parts[1]);
-                        setResult(RESULT_OK, result);
-                        finish();
-                    }
-                }
-            }
-        });
-        setContentView(webView);
+        webView.loadUrl(url);
+    }
 
-        // Load Page
-        Intent intent = getIntent();
-        if (intent.getData() != null) {
-            webView.loadUrl(intent.getDataString());
+    private class LoginWebViewClient extends WebViewClient {
+        // When start to load page, show url in activity's title bar
+        @Override
+        public void onPageStarted(WebView view, String url, Bitmap favicon) {
+            setTitle(url);
         }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            CookieSyncManager.getInstance().sync();
+            // get the cookie
+            String cookie = CookieManager.getInstance().getCookie(url);
+            if (cookie == null) {
+                return;
+            }
+
+            String[] pairs = cookie.split(";");
+            for (int i = 0; i < pairs.length; i++) {
+                String[] parts = pairs[i].split("=", 2);
+                // if token i found, return it to the calling activity
+                if (parts.length == 2 && parts[0].equalsIgnoreCase("_CentricBD_session")) {
+                    Intent result = new Intent();
+                    result.putExtra("token", parts[1]);
+                    setResult(RESULT_OK, result);
+                    finish();
+                }
+            }
+        }
+
     }
 }

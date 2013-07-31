@@ -6,7 +6,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import com.centric.web.JSONParser;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,11 +14,11 @@ import com.centric.web.JSONParser;
  * Time: 1:05 AM
  * To change this template use File | Settings | File Templates.
  */
-public class search extends Activity implements TextWatcher {
+public class find extends Activity implements TextWatcher {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.search);
+        setContentView(R.layout.find);
         String item[]={
                 "Shawn Wallace", "Gwenn Denorme", "Architect", "Developer",
                 ".Net", "Ruby", "Java", "Mike Brooks"
