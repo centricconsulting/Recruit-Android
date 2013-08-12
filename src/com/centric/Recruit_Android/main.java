@@ -38,7 +38,7 @@ public class main extends Activity {
             startActivityForResult(intent, LOGIN_WEB_VIEW);
         }
         else {
-            token = savedInstanceState.getString("TOKEN_KEY");
+            token = savedInstanceState.getString(TOKEN_KEY);
         }
 
     }
@@ -99,5 +99,11 @@ public class main extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-
+    @Override
+    public boolean onSearchRequested() {
+        Bundle appData = new Bundle();
+        appData.putString(SearchableActivity.SESSION_TOKEN, token);
+        startSearch(null, false, appData, false);
+        return true;
+    }
 }

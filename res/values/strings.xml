@@ -6,5 +6,7 @@
     <string name="menuitem_exit">Exit</string>
     <string name="menuitem_login">Login</string>
     <string name="google_auth_url">http://thawing-ridge-1647.herokuapp.com/auth/google_apps?mobile=1</string>
+    <string name="search_url">http://thawing-ridge-1647.herokuapp.com/resources/find/</string>
     <string name="menuitem_search">Search</string>
+    <string name="session_token">_CentricBD_session</string>
 </resources>

@@ -84,4 +84,7 @@ public class Resource {
 
     @SerializedName("updated_at")
     Date lastUpdated;
+
+    @SerializedName("resume_url")
+    String resumeUrl;
 }

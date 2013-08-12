@@ -2,6 +2,7 @@ package com.centric.Recruit_Android;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Window;
@@ -59,8 +60,9 @@ public class LoginWebView extends Activity {
             String[] pairs = cookie.split(";");
             for (int i = 0; i < pairs.length; i++) {
                 String[] parts = pairs[i].split("=", 2);
+                Resources res = getResources();
                 // if token i found, return it to the calling activity
-                if (parts.length == 2 && parts[0].equalsIgnoreCase("_CentricBD_session")) {
+                if (parts.length == 2 && parts[0].trim().equalsIgnoreCase(res.getString(R.string.session_token))) {
                     Intent result = new Intent();
                     result.putExtra("token", parts[1]);
                     setResult(RESULT_OK, result);
