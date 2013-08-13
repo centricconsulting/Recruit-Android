@@ -9,4 +9,5 @@
     <string name="search_url">http://thawing-ridge-1647.herokuapp.com/resources/find/</string>
     <string name="menuitem_search">Search</string>
     <string name="session_token">_CentricBD_session</string>
+    <string name="name">id</string>
 </resources>

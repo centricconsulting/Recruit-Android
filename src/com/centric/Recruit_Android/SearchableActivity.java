@@ -3,11 +3,18 @@ package com.centric.Recruit_Android;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import com.centric.recruit_models.Resource;
+import com.google.gson.reflect.TypeToken;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
@@ -17,6 +24,8 @@ import org.json.JSONObject;
 import com.google.gson.Gson;
 
 import com.centric.Recruit_Android.CentricBdClient;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -58,8 +67,10 @@ public class SearchableActivity extends ListActivity {
                 // Convert from JSONArray to Resources
                 if (resourcesArray != null && resourcesArray.length() > 0) {
                     Gson gson = new Gson();
-                    Resource[] resources = gson.fromJson(resourcesArray.toString(), Resource[].class);
-                    //setListAdapter(new ArrayAdapter<Resource>(getApplicationContext(), android.R.layout.activity_list_item, resources));
+                    List<Resource> resources = gson.fromJson(resourcesArray.toString(), new TypeToken<List<Resource>>(){}.getType());
+
+                    ListAdapter adapter = new ListAdapter(getApplicationContext(), R.layout.resourcelistrow, resources);
+                    setListAdapter(adapter);
                 }
             }
 
@@ -70,5 +81,50 @@ public class SearchableActivity extends ListActivity {
 
             }
         });
+    }
+
+    public class ListAdapter extends ArrayAdapter<Resource> {
+
+        public ListAdapter(Context context, int textViewResourceId) {
+            super(context, textViewResourceId);
+            // TODO Auto-generated constructor stub
+        }
+
+        private List<Resource> items;
+
+        public ListAdapter(Context context, int resource, List<Resource> items) {
+
+            super(context, resource, items);
+
+            this.items = items;
+
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            View v = convertView;
+
+            if (v == null) {
+
+                LayoutInflater vi;
+                vi = LayoutInflater.from(getContext());
+                v = vi.inflate(R.layout.resourcelistrow, null);
+
+            }
+
+            Resource p = items.get(position);
+
+            if (p != null) {
+
+                TextView tt = (TextView) v.findViewById(R.id.name);
+
+                if (tt != null) {
+                    tt.setText(p.getFullName());
+                }
+            }
+
+            return v;
+        }
     }
 }
