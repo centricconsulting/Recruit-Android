@@ -1,8 +1,11 @@
 package com.centric.recruit_models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +15,7 @@ import java.util.Date;
  * Time: 11:48 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Resource {
+public class Resource implements Serializable {
     @SerializedName("_id")
     String id;
 

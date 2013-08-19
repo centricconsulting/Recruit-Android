@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -36,30 +37,65 @@ import java.util.List;
  */
 public class SearchableActivity extends ListActivity {
     public static final String SESSION_TOKEN = "TOKEN_KEY";
+    private String ResourceJSON = null;
+    private List<Resource> ResourceList = null;
+    private static final int VIEW_RESOURCE = 1;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.searchresults);
 
-        // Get the intent, verify the action and get the query
-        Intent intent = getIntent();
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            Bundle appData = intent.getBundleExtra(SearchManager.APP_DATA);
+        if (savedInstanceState != null) {
+            ResourceJSON = savedInstanceState.getString("resources");
+            ResourceList = parseToResourceList(ResourceJSON);
 
-            String query = intent.getStringExtra(SearchManager.QUERY) ;
-            String token = appData.getString(SESSION_TOKEN);
+            ListAdapter adapter = new ListAdapter(getApplicationContext(), R.layout.resourcelistrow, ResourceList);
+            setListAdapter(adapter);
 
-            doSearch(query, token);
         }
+        else {
+            // Get the intent, verify the action and get the query
+            Intent intent = getIntent();
+            if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+                Bundle appData = intent.getBundleExtra(SearchManager.APP_DATA);
+
+                String query = intent.getStringExtra(SearchManager.QUERY) ;
+                String token = appData.getString(SESSION_TOKEN);
+
+                doSearch(query, token);
+            }
+        }
+
+        ListView view = getListView();
+
+        view.setOnItemClickListener(ResourcesOnItemClickListener);
     }
+
+    private AdapterView.OnItemClickListener ResourcesOnItemClickListener = new AdapterView.OnItemClickListener() {
+        public void onItemClick(AdapterView parent, View v, int position, long id) {
+            Intent intent = new Intent(getBaseContext(), ViewResource.class);
+            Resource item = ResourceList.get((int)id);
+            intent.putExtra(getString(R.string.viewResource), item);
+            startActivityForResult(intent, VIEW_RESOURCE);
+        }
+    };
+
+    @Override
+    protected void onSaveInstanceState(Bundle bundle) {
+        bundle.putString("resources", ResourceJSON);
+        super.onSaveInstanceState(bundle);
+    }
+
+    public static List<Resource> parseToResourceList(String json) {
+        Gson gson = new Gson();
+        return gson.fromJson(json, new TypeToken<List<Resource>>(){}.getType());
+    }
+
 
     public void doSearch(String query, String sessionToken) {
         Resources res = getResources();
         String searchUrl = res.getString(R.string.search_url) + query + ".json";
-        PersistentCookieStore cookieStore = new PersistentCookieStore(getApplicationContext());
-        BasicClientCookie cookie = new BasicClientCookie(res.getString(R.string.session_token), sessionToken);
-        cookie.setDomain("thawing-ridge-1647.herokuapp.com");
-        cookieStore.addCookie(cookie);
-        CentricBdClient.setCookieStore(cookieStore);
+        CentricBdClient.setApiToken(getApplicationContext(), sessionToken);
         CentricBdClient.get(searchUrl, null, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(JSONArray resourcesArray) {
@@ -67,9 +103,10 @@ public class SearchableActivity extends ListActivity {
                 // Convert from JSONArray to Resources
                 if (resourcesArray != null && resourcesArray.length() > 0) {
                     Gson gson = new Gson();
-                    List<Resource> resources = gson.fromJson(resourcesArray.toString(), new TypeToken<List<Resource>>(){}.getType());
+                    ResourceJSON = resourcesArray.toString();
+                    ResourceList = parseToResourceList(ResourceJSON);
 
-                    ListAdapter adapter = new ListAdapter(getApplicationContext(), R.layout.resourcelistrow, resources);
+                    ListAdapter adapter = new ListAdapter(getApplicationContext(), R.layout.resourcelistrow, ResourceList);
                     setListAdapter(adapter);
                 }
             }

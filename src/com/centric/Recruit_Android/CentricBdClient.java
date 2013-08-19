@@ -1,5 +1,8 @@
 package com.centric.Recruit_Android;
+import android.content.Context;
+import android.content.res.Resources;
 import com.loopj.android.http.*;
+import org.apache.http.impl.cookie.BasicClientCookie;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,6 +26,14 @@ public class CentricBdClient {
     }
 
     public static void setCookieStore(PersistentCookieStore cookieStore) {
+        client.setCookieStore(cookieStore);
+    }
+
+    public static void setApiToken(Context context, String token) {
+        PersistentCookieStore cookieStore = new PersistentCookieStore(context);
+        BasicClientCookie cookie = new BasicClientCookie(context.getString(R.string.api_token), token);
+        cookie.setDomain(context.getString(R.string.api_domain));
+        cookieStore.addCookie(cookie);
         client.setCookieStore(cookieStore);
     }
 }

@@ -34,7 +34,7 @@ public class main extends Activity {
             Resources res = getResources();
             //webView.loadUrl(res.getString(R.string.google_auth_url));
             Intent intent = new Intent(getBaseContext(), LoginWebView.class);
-            intent.putExtra("google_auth_url", res.getString(R.string.google_auth_url));
+            intent.putExtra(getString(R.string.auth_url_key), res.getString(R.string.google_auth_url));
             startActivityForResult(intent, LOGIN_WEB_VIEW);
         }
         else {

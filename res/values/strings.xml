@@ -8,6 +8,9 @@
     <string name="google_auth_url">http://thawing-ridge-1647.herokuapp.com/auth/google_apps?mobile=1</string>
     <string name="search_url">http://thawing-ridge-1647.herokuapp.com/resources/find/</string>
     <string name="menuitem_search">Search</string>
-    <string name="session_token">_CentricBD_session</string>
+    <string name="api_token">api_access_token</string>
     <string name="name">id</string>
+    <string name="api_domain">thawing-ridge-1647.herokuapp.com</string>
+    <string name="auth_url_key">google_auth_url</string>
+    <string name="viewResource">viewResource</string>
 </resources>

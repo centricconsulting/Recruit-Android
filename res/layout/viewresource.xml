@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:text="Bob Smith"
+            style="@android:style/TextAppearance.Large"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:layout_below="@+id/name"
+            style="@android:style/TextAppearance.Small"
+            android:id="@+id/statusLabel" />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/status"
+            android:text="First Interview"
+            android:layout_below="@+id/statusLabel"
+            style="@android:style/TextAppearance.Medium"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone:"
+            android:layout_below="@+id/status"
+            style="@android:style/TextAppearance.Small"
+            android:id="@+id/phoneLabel" />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone"
+            android:text="614-506-4549"
+            android:layout_below="@+id/phoneLabel"
+            android:clickable="true"
+            style="@android:style/TextAppearance.Medium"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:layout_below="@+id/phone"
+            style="@android:style/TextAppearance.Small"
+            android:id="@+id/emailLabel" />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:text="bob@smith.com"
+            android:layout_below="@+id/emailLabel"
+            android:clickable="true"
+            style="@android:style/TextAppearance.Medium"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Resume"
+            android:id="@+id/button" android:layout_alignParentLeft="true" android:layout_marginLeft="7dp"
+            android:layout_centerVertical="true"/>
+
+</RelativeLayout>

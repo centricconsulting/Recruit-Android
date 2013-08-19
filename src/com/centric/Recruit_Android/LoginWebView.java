@@ -62,7 +62,7 @@ public class LoginWebView extends Activity {
                 String[] parts = pairs[i].split("=", 2);
                 Resources res = getResources();
                 // if token i found, return it to the calling activity
-                if (parts.length == 2 && parts[0].trim().equalsIgnoreCase(res.getString(R.string.session_token))) {
+                if (parts.length == 2 && parts[0].trim().equalsIgnoreCase(res.getString(R.string.api_token))) {
                     Intent result = new Intent();
                     result.putExtra("token", parts[1]);
                     setResult(RESULT_OK, result);
