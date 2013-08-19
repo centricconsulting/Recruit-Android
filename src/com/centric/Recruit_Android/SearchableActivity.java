@@ -94,8 +94,8 @@ public class SearchableActivity extends ListActivity {
 
     public void doSearch(String query, String sessionToken) {
         Resources res = getResources();
-        String searchUrl = res.getString(R.string.search_url) + query + ".json";
-        CentricBdClient.setApiToken(getApplicationContext(), sessionToken);
+        String searchUrl = res.getString(R.string.search_url) + query + ".json?mobile=1";
+        CentricBdClient.addHeader(getString(R.string.AuthHeaderKey), getString(R.string.AuthTokenPrefix) + sessionToken);
         CentricBdClient.get(searchUrl, null, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(JSONArray resourcesArray) {

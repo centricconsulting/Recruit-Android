@@ -13,4 +13,6 @@
     <string name="api_domain">thawing-ridge-1647.herokuapp.com</string>
     <string name="auth_url_key">google_auth_url</string>
     <string name="viewResource">viewResource</string>
+    <string name="AuthHeaderKey">Authorization</string>
+    <string name="AuthTokenPrefix">Token token=</string>
 </resources>
