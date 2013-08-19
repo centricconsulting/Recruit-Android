@@ -1,6 +1,7 @@
 package com.centric.Recruit_Android;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,8 +9,12 @@ import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.centric.recruit_models.Resource;
+
+import java.io.File;
 
 /**
  * Created with IntelliJ IDEA.
@@ -35,16 +40,40 @@ public class ViewResource extends Activity {
         }
         bindResourceToView(resource);
 
-        TextView tvPhone = (TextView)findViewById(R.id.phone);
-        if (tvPhone.getText().toString().trim().length() > 0) {
+        if (resource.getCellPhoneNumber().length() > 0) {
+            TextView tvPhone = (TextView)findViewById(R.id.phone);
             tvPhone.setOnClickListener(PhoneNumberOnItemClickListener);
         }
 
-        TextView tvEmail = (TextView)findViewById(R.id.email);
-        if (tvEmail.getText().toString().trim().length() > 0) {
+        if (resource.getEmailAddress().length() > 0) {
+            TextView tvEmail = (TextView)findViewById(R.id.email);
             tvEmail.setOnClickListener(EmailOnItemClickListener);
         }
+
+        if (resource.getResumeUrl().length() > 0) {
+            Button button = (Button)findViewById(R.id.viewResumeButton);
+            button.setOnClickListener(ViewResumeButtonOnClickListener);
+        }
     }
+
+    private View.OnClickListener ViewResumeButtonOnClickListener = new View.OnClickListener() {
+        public void onClick(View v) {
+            String url = resource.getResumeUrl();
+            Uri path = Uri.parse(url);
+            Intent intent = new Intent(Intent.ACTION_VIEW, path);
+            //intent.setType(resource.getResumeContentType());
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+            try {
+                startActivity(intent);
+            }
+            catch (ActivityNotFoundException e) {
+                Toast.makeText(ViewResource.this,
+                        "No Application Available to View Resume (" + resource.getResumeContentType() + ")",
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
 
     private View.OnClickListener EmailOnItemClickListener = new View.OnClickListener() {
         public void onClick(View v) {
