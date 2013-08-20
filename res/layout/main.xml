@@ -5,4 +5,13 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userName" android:layout_gravity="left|center_vertical"
+            style="@android:style/TextAppearance.Large" />
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thisWeeksInterviewsView" android:layout_gravity="center"/>
 </LinearLayout>

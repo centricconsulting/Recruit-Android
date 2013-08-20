@@ -96,29 +96,31 @@ public class SearchableActivity extends ListActivity {
         Resources res = getResources();
         String searchUrl = res.getString(R.string.search_url) + query + ".json?mobile=1";
         CentricBdClient.addHeader(getString(R.string.AuthHeaderKey), getString(R.string.AuthTokenPrefix) + sessionToken);
-        CentricBdClient.get(searchUrl, null, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(JSONArray resourcesArray) {
-                System.out.println(resourcesArray.toString());
-                // Convert from JSONArray to Resources
-                if (resourcesArray != null && resourcesArray.length() > 0) {
-                    Gson gson = new Gson();
-                    ResourceJSON = resourcesArray.toString();
-                    ResourceList = parseToResourceList(ResourceJSON);
-
-                    ListAdapter adapter = new ListAdapter(getApplicationContext(), R.layout.resourcelistrow, ResourceList);
-                    setListAdapter(adapter);
-                }
-            }
-
-            @Override
-            public void onFailure(Throwable throwable, JSONArray jsonArray) {
-                super.onFailure(throwable, jsonArray);
-                System.out.println(throwable.toString());
-
-            }
-        });
+        CentricBdClient.get(searchUrl, null, ResourceResponseHandler);
     }
+
+    private JsonHttpResponseHandler ResourceResponseHandler =  new JsonHttpResponseHandler() {
+        @Override
+        public void onSuccess(JSONArray resourcesArray) {
+            System.out.println(resourcesArray.toString());
+            // Convert from JSONArray to Resources
+            if (resourcesArray != null && resourcesArray.length() > 0) {
+                Gson gson = new Gson();
+                ResourceJSON = resourcesArray.toString();
+                ResourceList = parseToResourceList(ResourceJSON);
+
+                ListAdapter adapter = new ListAdapter(getApplicationContext(), R.layout.resourcelistrow, ResourceList);
+                setListAdapter(adapter);
+            }
+        }
+
+        @Override
+        public void onFailure(Throwable throwable, JSONArray jsonArray) {
+            super.onFailure(throwable, jsonArray);
+            System.out.println(throwable.toString());
+
+        }
+    };
 
     public class ListAdapter extends ArrayAdapter<Resource> {
 

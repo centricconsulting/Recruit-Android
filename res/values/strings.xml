@@ -15,4 +15,5 @@
     <string name="viewResource">viewResource</string>
     <string name="AuthHeaderKey">Authorization</string>
     <string name="AuthTokenPrefix">Token token=</string>
+    <string name="find_user_url">http://thawing-ridge-1647.herokuapp.com/users/find_by_token/</string>
 </resources>

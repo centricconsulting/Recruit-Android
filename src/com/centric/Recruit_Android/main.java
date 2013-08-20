@@ -6,11 +6,23 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.webkit.*;
+import android.widget.TextView;
+import com.centric.recruit_models.Resource;
+import com.centric.recruit_models.User;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,7 +34,9 @@ import android.webkit.*;
 public class main extends Activity {
     private static final int LOGIN_WEB_VIEW = 1;
     private static final String TOKEN_KEY = "TOKEN_KEY";
+    private static final String USER_KEY = "USER_KEY";
     private String token = null;
+    private User user = null;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +53,21 @@ public class main extends Activity {
         }
         else {
             token = savedInstanceState.getString(TOKEN_KEY);
+            user = (User)savedInstanceState.getSerializable(USER_KEY);
+            bindUserToView(user);
         }
 
+    }
+
+    private void bindUserToView(User user) {
+        TextView tvName = (TextView)findViewById(R.id.userName);
+        tvName.setText("Welcome " + user.getFirstName() + " " + user.getLastName());
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString(TOKEN_KEY, token);
+        outState.putSerializable(USER_KEY, user);
         super.onSaveInstanceState(outState);
     }
 
@@ -55,11 +77,42 @@ public class main extends Activity {
 
         if (requestCode == LOGIN_WEB_VIEW) {
             if (resultCode == RESULT_OK) {
-                // Set cookie as string
+                // Set token as string
                 token = data.getStringExtra("token");
+
+                Resources res = getResources();
+                String findUserUrl = res.getString(R.string.find_user_url) + token + ".json?mobile=1";
+                CentricBdClient.addHeader(getString(R.string.AuthHeaderKey), getString(R.string.AuthTokenPrefix) + token);
+                CentricBdClient.get(findUserUrl, null, UserResponseHandler);
             }
         }
     }
+
+    private JsonHttpResponseHandler UserResponseHandler =  new JsonHttpResponseHandler() {
+        @Override
+        public void onSuccess(JSONArray userJSON) {
+            System.out.println(userJSON.toString());
+            // Convert from JSONArray to Resources
+            if (userJSON != null && userJSON.length() > 0) {
+                try {
+                    Gson gson = new Gson();
+                    String UserJSON = userJSON.getJSONObject(0).toString();
+                    user = gson.fromJson(UserJSON, User.class);
+                    bindUserToView(user);
+                }
+                catch(JSONException ex) {
+                    Log.e("UserJSON Exception", ex.getMessage(), ex);
+                }
+            }
+        }
+
+        @Override
+        public void onFailure(Throwable throwable, JSONArray jsonArray) {
+            super.onFailure(throwable, jsonArray);
+            System.out.println(throwable.toString());
+
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -78,16 +131,6 @@ public class main extends Activity {
 
     @Override  public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Start the WebViewActivity to handle the authentication.
-            case R.id.login:
-//                Intent intent = new Intent(this, LoginWebView.class);
-//                Resources res = getResources();
-//                intent.setData(Uri.parse(res.getString(R.string.google_auth_url)));
-//                startActivityForResult(intent, 0);
-                Resources res = getResources();
-                WebView webView = (WebView) findViewById(R.id.loginWebView);
-                webView.loadUrl(res.getString(R.string.google_auth_url));
-                return true;
             // Exit.
             case R.id.exit:
                 finish();
