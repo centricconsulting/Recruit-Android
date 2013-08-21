@@ -1,18 +1,19 @@
 package com.centric.Recruit_Android;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.view.*;
 import android.webkit.*;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import com.centric.recruit_models.Interview;
 import com.centric.recruit_models.Resource;
 import com.centric.recruit_models.User;
 import com.google.gson.Gson;
@@ -35,8 +36,11 @@ public class main extends Activity {
     private static final int LOGIN_WEB_VIEW = 1;
     private static final String TOKEN_KEY = "TOKEN_KEY";
     private static final String USER_KEY = "USER_KEY";
+    private static final String INTERVIEW_KEY = "INTERVIEW_KEY";
     private String token = null;
     private User user = null;
+    private String InterviewsJSON = null;
+    private List<Interview> InterviewList = null;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +58,9 @@ public class main extends Activity {
         else {
             token = savedInstanceState.getString(TOKEN_KEY);
             user = (User)savedInstanceState.getSerializable(USER_KEY);
+            InterviewList = parseToInterviewList(savedInstanceState.getString(INTERVIEW_KEY));
             bindUserToView(user);
+            bindInterviewsListToView(InterviewList);
         }
 
     }
@@ -64,10 +70,17 @@ public class main extends Activity {
         tvName.setText("Welcome " + user.getFirstName() + " " + user.getLastName());
     }
 
+    private void bindInterviewsListToView(List<Interview> list) {
+        ListView view = (ListView)findViewById(R.id.thisWeeksInterviewsView);
+        InterviewListAdapter adapter = new InterviewListAdapter(getApplicationContext(), R.layout.interviewlistrow, list);
+        view.setAdapter(adapter);
+    }
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString(TOKEN_KEY, token);
         outState.putSerializable(USER_KEY, user);
+        outState.putString(INTERVIEW_KEY, InterviewsJSON);
         super.onSaveInstanceState(outState);
     }
 
@@ -84,8 +97,37 @@ public class main extends Activity {
                 String findUserUrl = res.getString(R.string.find_user_url) + token + ".json?mobile=1";
                 CentricBdClient.addHeader(getString(R.string.AuthHeaderKey), getString(R.string.AuthTokenPrefix) + token);
                 CentricBdClient.get(findUserUrl, null, UserResponseHandler);
+
+                String thisWeeksInterviewUrl = res.getString(R.string.this_weeks_interviews_url) + ".json?mobile=1";
+                CentricBdClient.get(thisWeeksInterviewUrl, null, ThisWeeksInterviewsResponseHandler);
             }
         }
+    }
+
+    private JsonHttpResponseHandler ThisWeeksInterviewsResponseHandler =  new JsonHttpResponseHandler() {
+        @Override
+        public void onSuccess(JSONArray interviewsJSON) {
+            System.out.println(interviewsJSON.toString());
+            // Convert from JSONArray to Resources
+            if (interviewsJSON != null && interviewsJSON.length() > 0) {
+                Gson gson = new Gson();
+                InterviewsJSON = interviewsJSON.toString();
+                InterviewList = parseToInterviewList(InterviewsJSON);
+                bindInterviewsListToView(InterviewList);
+            }
+        }
+
+        @Override
+        public void onFailure(Throwable throwable, JSONArray jsonArray) {
+            super.onFailure(throwable, jsonArray);
+            System.out.println(throwable.toString());
+
+        }
+    };
+
+    public static List<Interview> parseToInterviewList(String json) {
+        Gson gson = new Gson();
+        return gson.fromJson(json, new TypeToken<List<Interview>>(){}.getType());
     }
 
     private JsonHttpResponseHandler UserResponseHandler =  new JsonHttpResponseHandler() {
@@ -148,5 +190,64 @@ public class main extends Activity {
         appData.putString(SearchableActivity.SESSION_TOKEN, token);
         startSearch(null, false, appData, false);
         return true;
+    }
+
+    public class InterviewListAdapter extends ArrayAdapter<Interview> {
+        public InterviewListAdapter(Context context, int textViewResourceId) {
+            super(context, textViewResourceId);
+            // TODO Auto-generated constructor stub
+        }
+
+        private List<Interview> items;
+
+        public InterviewListAdapter(Context context, int resource, List<Interview> items) {
+
+            super(context, resource, items);
+
+            this.items = items;
+
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            View v = convertView;
+
+            if (v == null) {
+
+                LayoutInflater vi;
+                vi = LayoutInflater.from(getContext());
+                v = vi.inflate(R.layout.interviewlistrow, null);
+
+            }
+
+            Interview interview = items.get(position);
+
+            if (interview != null) {
+
+                TextView tvDateTime = (TextView) v.findViewById(R.id.datetime);
+                TextView tvResourceName = (TextView)v.findViewById(R.id.resourceName);
+                TextView tvUserName = (TextView)v.findViewById(R.id.userName);
+                TextView tvLocation = (TextView)v.findViewById(R.id.location);
+
+                if (tvDateTime != null) {
+                    tvDateTime.setText(interview.getInterviewDate().toString());
+                }
+
+                if (tvResourceName != null) {
+                    tvResourceName.setText(interview.getResource().getFullName());
+                }
+
+                if (tvUserName != null) {
+                    tvUserName.setText(interview.getUser().getFullName());
+                }
+
+                if (tvLocation != null) {
+                    tvLocation.setText(interview.getLocation());
+                }
+            }
+
+            return v;
+        }
     }
 }

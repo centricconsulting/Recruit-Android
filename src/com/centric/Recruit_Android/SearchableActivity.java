@@ -51,7 +51,6 @@ public class SearchableActivity extends ListActivity {
 
             ListAdapter adapter = new ListAdapter(getApplicationContext(), R.layout.resourcelistrow, ResourceList);
             setListAdapter(adapter);
-
         }
         else {
             // Get the intent, verify the action and get the query
